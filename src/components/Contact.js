@@ -3,15 +3,15 @@ import './Contact.css';
 import PropTypes from 'prop-types';
 
 
-function Contact(props){
+function Contact({avatar, name, online}){
     return(
         <div className='Contact'>
-        <img className='avatar' src={props.avatar} alt={props.name}/>
+        <img className='avatar' src={avatar} alt={name}/>
         <div>
-            <div className='name'>{props.name}</div>
+            <div className='name'>{name}</div>
             <div className='status'>
-                <div className={props.online?'status-online' : 'status-offline'}></div>
-                <div className='status-text'>{props.online ? 'online' : 'offline'}</div>
+                <div className={online?'status-online' : 'status-offline'}></div>
+                <div className='status-text'>{online ? 'online' : 'offline'}</div>
             </div>
         </div>
         </div>
